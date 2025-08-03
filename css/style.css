@@ -227,3 +227,63 @@ footer {
   display: inline-block;
   margin-top: 15px;
 }
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 55px;
+  height: 55px;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 255, 140, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 55px;
+  height: 55px;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 255, 140, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 55px;
+  height: 55px;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 255, 140, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float img:hover {
+  transform: scale(1.1);
+}
