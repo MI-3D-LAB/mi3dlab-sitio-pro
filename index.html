@@ -2,81 +2,119 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>M.I 3D LAB - Impresión 3D en Espinar</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="favicon.ico" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M.I 3D LAB</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
-<body class="bg-gray-950 text-white font-sans">
+<body class="bg-gray-950 text-white">
 
-    <!-- Sección: Inicio -->
-    <section class="text-center py-20 bg-gray-900">
-        <h1 class="text-4xl font-bold text-cyan-400 mb-4">M.I 3D LAB</h1>
-        <p class="text-lg mb-6">Transformamos tus ideas en realidad con impresión 3D</p>
-        <a href="https://wa.me/51944022505" target="_blank" class="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-full transition">Chatear por WhatsApp</a>
-    </section>
+<!-- NAV -->
+<nav class="bg-gray-900 text-white fixed w-full z-50 top-0 shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex-shrink-0 text-cyan-400 font-bold text-xl">M.I 3D LAB</div>
+      <div class="hidden md:flex space-x-6">
+        <a href="#inicio" class="hover:text-cyan-400 transition">Inicio</a>
+        <a href="#quienes" class="hover:text-cyan-400 transition">¿Quiénes somos?</a>
+        <a href="#productos" class="hover:text-cyan-400 transition">Productos</a>
+        <a href="https://wa.me/51944022505" target="_blank" class="hover:text-green-400 transition">Contacto</a>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-btn" aria-label="Abrir menú" class="text-white text-2xl focus:outline-none">☰</button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 bg-gray-800">
+    <a href="#inicio" class="block hover:text-cyan-400 transition">Inicio</a>
+    <a href="#quienes" class="block hover:text-cyan-400 transition">¿Quiénes somos?</a>
+    <a href="#productos" class="block hover:text-cyan-400 transition">Productos</a>
+    <a href="https://wa.me/51944022505" target="_blank" class="block hover:text-green-400 transition">Contacto</a>
+  </div>
+</nav>
+<div class="h-16"></div>
 
-    <!-- Sección: ¿Quiénes somos? -->
-    <section class="py-16 px-6 text-center bg-gray-950">
-        <h2 class="text-3xl font-bold text-white mb-4">¿Quiénes somos?</h2>
-        <p class="text-gray-300 max-w-2xl mx-auto">Somos un laboratorio creativo especializado en impresión 3D personalizada. Desde Espinar – Cusco creamos piezas únicas con precisión, tecnología y pasión local.</p>
-    </section>
+<!-- HERO -->
+<section id="inicio" class="text-center py-20 bg-gray-950">
+  <h1 class="text-4xl md:text-5xl font-extrabold text-cyan-400 mb-4">M.I 3D LAB</h1>
+  <p class="text-lg md:text-xl mb-6">Transformamos tus ideas en realidad con impresión 3D</p>
+  <a href="#productos" class="bg-cyan-500 hover:bg-cyan-600 text-white py-2 px-6 rounded-full transition">Ver Productos</a>
+</section>
 
-    <!-- Sección: Nuestros Productos -->
-    <section class="py-16 px-6 bg-gray-900 text-center">
-        <h2 class="text-3xl font-bold mb-8 text-white">Nuestros Productos</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
-            <img src="images/flexibles/flexible1.jpg" alt="Flexible 1" class="rounded shadow" />
-            <img src="images/decoraciones/decoracion1.jpg" alt="Decoración 1" class="rounded shadow" />
-            <img src="images/llaveros/llavero1.jpg" alt="Llavero 1" class="rounded shadow" />
-            <img src="images/macetas/maceta1.jpg" alt="Maceta 1" class="rounded shadow" />
-            <img src="images/soportes/soporte1.jpg" alt="Soporte 1" class="rounded shadow" />
-        </div>
-    </section>
+<!-- QUIENES SOMOS -->
+<section id="quienes" class="py-16 text-center bg-gray-900">
+  <h2 class="text-2xl font-bold mb-4">¿Quiénes somos?</h2>
+  <p class="max-w-3xl mx-auto text-gray-300">
+    Somos un laboratorio creativo especializado en impresión 3D personalizada. Desde llaveros hasta piezas funcionales, hacemos realidad tus ideas con precisión y estilo.
+  </p>
+</section>
 
-    <!-- Sección: Testimonios -->
-    <section class="bg-gray-800 py-16 px-6 text-center text-gray-300">
-        <h2 class="text-3xl font-bold text-white mb-10">Lo que dicen nuestros clientes</h2>
-        <div class="max-w-4xl mx-auto space-y-8">
-            <blockquote class="italic border-l-4 border-cyan-400 pl-4">
-                “Encargué una figura para regalar y quedó increíble. Lo recogí al día siguiente sin problemas.”<br />
-                <span class="block mt-2 font-semibold text-white">— Rosa, Yauri</span>
-            </blockquote>
-            <blockquote class="italic border-l-4 border-green-400 pl-4">
-                “Me imprimieron un soporte para celular justo como lo necesitaba. ¡Ahora trabajo más cómodo!”<br />
-                <span class="block mt-2 font-semibold text-white">— Julio, Condoroma</span>
-            </blockquote>
-            <blockquote class="italic border-l-4 border-yellow-400 pl-4">
-                “Buena atención y trabajo preciso. Soy de Ocoruro y me trajeron el pedido hasta la plaza.”<br />
-                <span class="block mt-2 font-semibold text-white">— Lucía, Ocoruro</span>
-            </blockquote>
-        </div>
-    </section>
+<!-- VIDEO -->
+<section class="bg-gray-800 py-12 text-center">
+  <h2 class="text-2xl font-bold mb-6">Video presentación</h2>
+  <div class="max-w-3xl mx-auto">
+    <iframe class="w-full aspect-video rounded shadow" src="https://www.youtube.com/embed/bO2wcA4WdSI" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
 
-    <!-- Sección: Video -->
-    <section class="py-16 px-6 bg-gray-900 text-center">
-        <h2 class="text-3xl font-bold text-white mb-6">Conoce cómo trabajamos</h2>
-        <div class="max-w-2xl mx-auto aspect-video">
-            <iframe class="w-full h-full rounded" src="https://www.youtube.com/embed/bO2wcA4WdSI" title="Video de presentación" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </section>
+<!-- PRODUCTOS -->
+<section id="productos" class="py-16 bg-gray-950 text-center">
+  <h2 class="text-2xl font-bold mb-10">Nuestros Productos</h2>
+  <div class="flex justify-center flex-wrap gap-6 px-4">
+    <img src="images/llaveros/llavero1.jpg" alt="Llavero 1" class="w-40 h-40 object-cover rounded shadow" />
+    <img src="images/llaveros/llavero2.jpg" alt="Llavero 2" class="w-40 h-40 object-cover rounded shadow" />
+    <img src="images/flexibles/flexible1.jpg" alt="Flexible 1" class="w-40 h-40 object-cover rounded shadow" />
+    <img src="images/decoraciones/decoracion1.jpg" alt="Decoración 1" class="w-40 h-40 object-cover rounded shadow" />
+  </div>
+</section>
 
-    <!-- Sección: Contacto -->
-    <section class="py-16 px-6 bg-gray-950 text-center">
-        <h2 class="text-3xl font-bold text-white mb-4">Contáctanos</h2>
-        <p class="mb-4 text-gray-400">Escríbenos directamente por WhatsApp para cotizar o hacer pedidos personalizados.</p>
-        <a href="https://wa.me/51944022505" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full transition">Ir al WhatsApp</a>
-    </section>
+<!-- TESTIMONIOS -->
+<section class="bg-gray-800 py-16 text-center text-gray-300">
+  <h2 class="text-2xl font-bold text-white mb-10">Lo que dicen nuestros clientes</h2>
+  <div class="max-w-4xl mx-auto space-y-8">
+    <blockquote class="italic border-l-4 border-cyan-400 pl-4">
+      “Encargué una figura para regalar y quedó increíble. Lo recogí al día siguiente sin problemas.”<br/>
+      <span class="block mt-2 font-semibold text-white">— Rosa, Yauri</span>
+    </blockquote>
+    <blockquote class="italic border-l-4 border-green-400 pl-4">
+      “Me imprimieron un soporte para celular justo como lo necesitaba. ¡Ahora trabajo más cómodo!”<br/>
+      <span class="block mt-2 font-semibold text-white">— Julio, Condoroma</span>
+    </blockquote>
+    <blockquote class="italic border-l-4 border-yellow-400 pl-4">
+      “Buena atención y trabajo preciso. Soy de Ocoruro y me trajeron el pedido hasta la plaza.”<br/>
+      <span class="block mt-2 font-semibold text-white">— Lucía, Ocoruro</span>
+    </blockquote>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-center text-gray-400 py-8 px-4">
-        <p class="mb-2">De la idea a la realidad • Impresión 3D en Espinar</p>
-        <div class="space-x-4">
-            <a href="https://www.instagram.com/m.i.3d.lab" class="hover:text-white transition">Instagram</a>
-            <a href="https://www.facebook.com/share/1d4GSncz6YjF7" class="hover:text-white transition">Facebook</a>
-        </div>
-    </footer>
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-center py-10 mt-10 px-6">
+  <h2 class="text-2xl font-semibold mb-4">De la idea a la realidad</h2>
+  <img src="images/footer/footer_showcase.jpg" alt="Inspiración 3D" class="mx-auto mb-6 rounded shadow max-w-md w-full" />
+  <div class="flex justify-center space-x-6 mb-4">
+    <a href="https://www.instagram.com/m.i.3d.lab" target="_blank" class="text-cyan-400 hover:text-white transition">Instagram</a>
+    <a href="https://www.facebook.com/share/1dG5cnz6YjF" target="_blank" class="text-cyan-400 hover:text-white transition">Facebook</a>
+  </div>
+  <p class="text-sm text-gray-500">&copy; 2025 M.I 3D LAB | Todos los derechos reservados</p>
+</footer>
+
+<!-- BOTÓN WHATSAPP FLOTANTE -->
+<a href="https://wa.me/51944022505" target="_blank" class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 text-2xl">💬</a>
+
+<!-- SCRIPT MENÚ HAMBURGUESA -->
+<script>
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+</script>
 
 </body>
 </html>
