@@ -232,5 +232,42 @@
     });
   </script>
 
+
+  <!-- Carrusel de productos destacados -->
+  <section class="bg-gray-950 py-16 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-10 text-cyan-400">Destacados de M.I 3D LAB</h2>
+    <div class="swiper mySwiper max-w-5xl mx-auto">
+      <div class="swiper-wrapper">
+        <!-- Reemplazar rutas con imágenes reales existentes -->
+        <div class="swiper-slide"><img src="images/llaveros/llavero3.jpg" class="rounded shadow mx-auto w-full max-w-xs"></div>
+        <div class="swiper-slide"><img src="images/decoraciones/decoracion5.jpg" class="rounded shadow mx-auto w-full max-w-xs"></div>
+        <div class="swiper-slide"><img src="images/flexibles/flexible2.jpg" class="rounded shadow mx-auto w-full max-w-xs"></div>
+        <div class="swiper-slide"><img src="images/macetas/maceta4.jpg" class="rounded shadow mx-auto w-full max-w-xs"></div>
+        <div class="swiper-slide"><img src="images/soportes/soporte7.jpg" class="rounded shadow mx-auto w-full max-w-xs"></div>
+        <div class="swiper-slide"><img src="images/organizadores/organizador1.jpg" class="rounded shadow mx-auto w-full max-w-xs"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SwiperJS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 1,
+      spaceBetween: 30,
+      centeredSlides: true,
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+  </script>
+
 </body>
 </html>
