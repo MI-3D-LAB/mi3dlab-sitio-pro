@@ -1,111 +1,156 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>M.I 3D LAB</title>
+  <meta name="description" content="M.I 3D LAB - Impresiones 3D personalizadas en Yauri, Espinar. Llaveros, decoraciones, soportes, macetas y más. Tu idea hecha realidad.">
+  <meta name="author" content="M.I 3D LAB">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="favicon.ico" />
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body class="bg-gray-950 text-white">
 
-  <!-- Header principal -->
-  <header class="text-center py-12 bg-gray-900">
-    <h1 class="text-4xl font-bold text-cyan-400">M.I 3D LAB</h1>
-    <p class="mt-2 text-lg">Transformamos tus ideas en realidad con impresión 3D</p>
-    <a href="#productos" class="mt-4 inline-block bg-cyan-400 hover:bg-cyan-500 text-white font-semibold py-2 px-4 rounded-full transition">Ver Productos</a>
+  <!-- Menú de navegación -->
+  <nav class="bg-gray-900 text-white fixed w-full z-50 top-0 shadow">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
+      <div class="text-cyan-400 font-bold text-xl">M.I 3D LAB</div>
+      <div class="hidden md:flex space-x-6">
+        <a href="#inicio" class="hover:text-cyan-400 transition">Inicio</a>
+        <a href="#quienes" class="hover:text-cyan-400 transition">¿Quiénes somos?</a>
+        <a href="#productos" class="hover:text-cyan-400 transition">Productos</a>
+        <a href="#personalizados" class="hover:text-cyan-400 transition">Encargo Personalizado</a>
+        <a href="#contacto" class="hover:text-green-400 transition">Contacto</a>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-btn" aria-label="Abrir menú" class="text-white text-2xl">☰</button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 bg-gray-800">
+      <a href="#inicio" class="block hover:text-cyan-400">Inicio</a>
+      <a href="#quienes" class="block hover:text-cyan-400">¿Quiénes somos?</a>
+      <a href="#productos" class="block hover:text-cyan-400">Productos</a>
+      <a href="#personalizados" class="block hover:text-cyan-400">Encargo Personalizado</a>
+      <a href="#contacto" class="block hover:text-green-400">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- Espacio para que no se oculte el contenido por el nav -->
+  <div id="inicio" class="pt-16"></div>
+
+  <!-- Hero -->
+  <header class="bg-gray-900 text-center py-16 px-6">
+    <h1 class="text-5xl font-bold mb-4 text-cyan-400">M.I 3D LAB</h1>
+    <p class="text-2xl mb-6">Transformamos tus ideas en realidad con impresión 3D</p>
+    <a href="#productos" class="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-full font-semibold transition">Ver Productos</a>
   </header>
 
-  <!-- Franja de validación social -->
-  <div class="text-center text-cyan-400 py-2 text-sm">Más de 50 clientes felices ya confían en nosotros. ¿Y tú?</div>
-
-  <!-- Sección: Tu idea hecha realidad -->
-  <section class="bg-gray-800 text-center py-12 px-6">
-    <h2 class="text-xl font-semibold mb-2">Tu idea hecha realidad</h2>
-    <p>¿Tienes una idea única? Cuéntanosla y la imprimimos para ti.</p>
-    <a href="https://wa.me/51944022505" target="_blank" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full transition">Chatear por WhatsApp</a>
+  <!-- Historia e Identidad -->
+  <section id="quienes" class="py-16 px-6 max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-4">¿Quiénes somos?</h2>
+    <p class="text-lg text-gray-300 mb-6">Soy un emprendedor orgullosamente de Yauri, Espinar. En un lugar donde la tecnología aún no ha llegado a todos, decidí abrir el primer laboratorio de impresión 3D de mi comunidad. En M.I 3D LAB llevamos tus ideas del corazón... ¡a la realidad impresa!</p>
+    <p class="text-cyan-400 font-semibold">Más de 50 clientes felices ya confían en nosotros. ¿Y tú?</p>
   </section>
 
-  <!-- Sección: ¿Quiénes somos? -->
-  <section class="text-center py-16 px-6">
-    <h2 class="text-2xl font-bold mb-4">¿Quiénes somos?</h2>
-    <p class="max-w-2xl mx-auto text-gray-300">
-      Soy un joven emprendedor de Yauri que apuesta por la innovación en mi tierra. No hay impresión 3D aquí, pero yo lo traigo para que todos puedan tener productos únicos y personalizados.
-    </p>
+  <!-- Llamado a acción -->
+  <section class="bg-gray-800 py-12 px-6 text-center">
+    <h3 class="text-2xl font-bold mb-2">Tu idea hecha realidad</h3>
+    <p class="mb-4 text-gray-300">¿Tienes una idea única? Cuéntanosla y la imprimimos para ti.</p>
+    <a href="https://wa.me/51944022505?text=Hola%2C%20quiero%20crear%20una%20pieza%20personalizada" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition">Chatear por WhatsApp</a>
   </section>
 
-  <!-- Sección: Productos -->
-  <section id="productos" class="text-center py-12">
-    <h2 class="text-2xl font-bold mb-6">Nuestros Productos</h2>
+  <!-- Productos -->
+  <section id="productos" class="py-16 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-10">Nuestros Productos</h2>
 
-    <div class="flex flex-wrap justify-center gap-8">
-      <!-- Producto 1 -->
-      <div class="bg-gray-900 rounded-lg p-4 max-w-xs">
-        <img src="images/decoraciones/decoracion1.jpg" alt="Llavero con nombre" class="rounded mb-3 w-full h-48 object-cover" />
-        <h3 class="font-semibold">Llavero con nombre</h3>
-        <p class="text-sm text-gray-400">Desde S/5.00</p>
-        <a href="https://wa.me/51944022505?text=Hola%2C%20quiero%20encargar%20un%20llavero%20con%20nombre" target="_blank" class="mt-2 inline-block bg-green-500 hover:bg-green-600 text-white text-sm px-4 py-2 rounded transition">Encargar</a>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Producto Ejemplo -->
+      <div class="text-center">
+        <img src="images/llaveros/llavero1.jpg" class="rounded shadow mx-auto h-[200px] w-full object-cover mb-2" alt="Llavero personalizado">
+        <p class="text-sm">Llavero con nombre</p>
+        <p class="text-xs text-gray-400">Desde S/5.00</p>
+        <a href="https://wa.me/51944022505?text=Hola%2C%20quiero%20el%20llavero%20con%20nombre" target="_blank" class="inline-block mt-1 px-3 py-1 bg-green-500 hover:bg-green-600 text-white rounded text-sm">Encargar</a>
       </div>
-
-      <!-- Agrega más productos aquí... -->
+      <!-- Duplicar este bloque con otros productos -->
     </div>
   </section>
 
-  <!-- Sección: Producto personalizado -->
-  <section class="bg-gray-800 text-center py-12 px-6">
-    <h2 class="text-xl font-bold mb-4">¿Deseas un producto personalizado?</h2>
-    <p class="mb-4 text-gray-300">Podemos crear lo que imagines: piezas, nombres, soportes, recuerdos, partes funcionales o decoraciones especiales. Escríbenos directamente con tu idea.</p>
-    <a href="https://wa.me/51944022505?text=Hola%2C%20quiero%20encargar%20un%20producto%20personalizado" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-full transition">Encargar Personalizado</a>
+  <!-- Encargo personalizado -->
+  <section id="personalizados" class="bg-gray-800 py-16 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-4 text-white">¿Deseas un producto personalizado?</h2>
+    <p class="text-gray-300 mb-6 max-w-2xl mx-auto">Podemos crear lo que imagines: piezas, nombres, soportes, recuerdos, partes funcionales o decoraciones especiales. Escríbenos directamente con tu idea.</p>
+    <a href="https://wa.me/51944022505?text=Hola%2C%20quiero%20crear%20un%20producto%20personalizado" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition">Encargar Personalizado</a>
   </section>
 
-  <!-- Sección: Testimonios -->
-  <section class="bg-gray-900 text-center py-16 px-6 text-gray-300">
-    <h2 class="text-2xl font-bold text-white mb-10">Lo que dicen nuestros clientes</h2>
+  <!-- Catálogo PDF -->
+  <section class="bg-gray-900 py-12 px-6 text-center">
+    <h2 class="text-3xl font-bold text-cyan-400 mb-4">Catálogo completo</h2>
+    <p class="text-gray-300 mb-4">Descarga nuestro catálogo de productos para explorar más opciones y precios.</p>
+    <a href="catalogo_mi3dlab.pdf" download class="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-full font-semibold transition">Descargar Catálogo PDF</a>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="bg-gray-800 py-16 px-6 text-center text-gray-300">
+    <h2 class="text-3xl font-bold text-white mb-10">Lo que dicen nuestros clientes</h2>
     <div class="max-w-4xl mx-auto space-y-8">
-      <blockquote class="italic border-l-4 border-cyan-400 pl-4">
-        “Encargué una figura para regalar y quedó increíble. Lo recogí al día siguiente sin problemas.”<br>
-        <span class="block mt-2 font-semibold text-white">— Rosa, Yauri</span>
-      </blockquote>
-      <blockquote class="italic border-l-4 border-green-400 pl-4">
-        “Me imprimieron un soporte para celular justo como lo necesitaba. ¡Ahora trabajo más cómodo!”<br>
-        <span class="block mt-2 font-semibold text-white">— Julio, Condoroma</span>
-      </blockquote>
-      <blockquote class="italic border-l-4 border-yellow-400 pl-4">
-        “Buena atención y trabajo preciso. Soy de Ocoruro y me trajeron el pedido hasta la plaza.”<br>
-        <span class="block mt-2 font-semibold text-white">— Lucía, Ocoruro</span>
-      </blockquote>
+      <blockquote class="italic border-l-4 border-cyan-400 pl-4">“Encargué una figura para regalar y quedó increíble. Lo recogí al día siguiente sin problemas.”<span class="block mt-2 font-semibold text-white">— Rosa, Yauri</span></blockquote>
+      <blockquote class="italic border-l-4 border-green-400 pl-4">“Me imprimieron un soporte para celular justo como lo necesitaba. ¡Ahora trabajo más cómodo!”<span class="block mt-2 font-semibold text-white">— Julio, Condoroma</span></blockquote>
     </div>
-  </section>
-
-  <!-- Sección: Catálogo PDF -->
-  <section class="text-center py-12 px-6">
-    <h2 class="text-xl font-bold mb-4">Catálogo en PDF</h2>
-    <p class="text-gray-300 mb-4">Descarga nuestro catálogo con productos destacados, precios y más detalles.</p>
-    <a href="catalogo-mi3dlab.pdf" target="_blank" class="bg-cyan-500 hover:bg-cyan-600 text-white py-2 px-4 rounded transition">Descargar Catálogo</a>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-center py-12 mt-20 px-6">
+  <footer id="contacto" class="bg-gray-900 text-center py-12 mt-20 px-6">
     <h2 class="text-2xl font-semibold mb-4">De la idea a la realidad</h2>
-    <img src="footer/footer_showcase.jpg" alt="Inspiración 3D" class="mx-auto mb-6 rounded shadow max-w-md w-full" />
+    <img src="images/footer_showcase.jpg" alt="Inspiración 3D" class="mx-auto mb-6 rounded shadow max-w-md w-full" />
     <div class="flex justify-center space-x-4 mb-6">
       <a href="https://www.instagram.com/m.i.3d.lab" target="_blank" class="text-cyan-400 hover:text-white transition">Instagram</a>
-      <a href="https://www.facebook.com/share/1dG5rcz6y6J" target="_blank" class="text-cyan-400 hover:text-white transition">Facebook</a>
+      <a href="https://www.facebook.com/share/14GSrcz6yJF/" target="_blank" class="text-cyan-400 hover:text-white transition">Facebook</a>
     </div>
     <p class="text-sm text-gray-500">&copy; 2025 M.I 3D LAB | Todos los derechos reservados</p>
-  </footer>
+  
+<!-- Sección: Encarga algo personalizado -->
+<section class="bg-gray-800 text-center py-16 px-6">
+  <h2 class="text-2xl font-bold text-white mb-4">¿Tienes una idea especial?</h2>
+  <p class="text-gray-300 max-w-xl mx-auto mb-6">
+    Diseñamos llaveros, soportes, nombres, piezas funcionales o decorativas. Si puedes imaginarlo, podemos imprimirlo.
+  </p>
+  <a href="https://wa.me/51944022505?text=Hola%2C%20quiero%20encargar%20un%20producto%20personalizado" 
+     target="_blank"
+     class="bg-green-500 hover:bg-green-600 text-white py-3 px-6 rounded-full transition">
+    Encargar personalizado por WhatsApp
+  </a>
+</section>
+
+<!-- Sección: Catálogo PDF -->
+<section class="bg-gray-950 text-center py-12 px-6">
+  <h2 class="text-xl font-bold mb-4 text-cyan-400">Catálogo completo de productos</h2>
+  <p class="text-gray-300 mb-4">Descarga nuestro catálogo en PDF con más productos, precios y opciones personalizadas.</p>
+  <a href="catalogo-mi3dlab.pdf" target="_blank" 
+     class="bg-cyan-500 hover:bg-cyan-600 text-white py-2 px-4 rounded transition">
+    Descargar catálogo PDF
+  </a>
+</section>
+
+</footer>
 
   <!-- Botón WhatsApp flotante -->
-  <a href="https://wa.me/51944022505?text=Hola%2C%20vi%20tu%20página%20web%20y%20quiero%20saber%20más%20sobre%20tus%20productos%203D." 
-     class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 text-2xl"
-     target="_blank" aria-label="Chatea por WhatsApp">
+  <a href="https://wa.me/51944022505" target="_blank"
+     class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 text-2xl">
     💬
   </a>
+
+  <!-- Script del menú -->
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </body>
 </html>
