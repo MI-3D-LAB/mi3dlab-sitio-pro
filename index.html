@@ -1,81 +1,220 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>M.I 3D LAB</title>
-  <meta name="description" content="M.I 3D LAB - Impresiones 3D personalizadas en Yauri, Espinar. Llaveros, decoraciones, soportes, macetas y más. Tu idea hecha realidad.">
-  <meta name="author" content="M.I 3D LAB">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="favicon.ico">
 </head>
 <body class="bg-gray-950 text-white">
-
-  <!-- NAV -->
+  <!-- Menú de navegación -->
   <nav class="bg-gray-900 text-white fixed w-full z-50 top-0 shadow">
-    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
-      <div class="text-cyan-400 font-bold text-xl">M.I 3D LAB</div>
-      <div class="hidden md:flex space-x-6">
-        <a href="#inicio" class="hover:text-cyan-400 transition">Inicio</a>
-        <a href="#quienes" class="hover:text-cyan-400 transition">¿Quiénes somos?</a>
-        <a href="#productos" class="hover:text-cyan-400 transition">Productos</a>
-        <a href="#personalizados" class="hover:text-cyan-400 transition">Personalizados</a>
-        <a href="#contacto" class="hover:text-green-400 transition">Contacto</a>
-      </div>
-      <div class="md:hidden">
-        <button id="menu-btn" class="text-white text-2xl">☰</button>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex-shrink-0 text-cyan-400 font-bold text-xl">M.I 3D LAB</div>
+        <div class="hidden md:flex space-x-6">
+          <a href="#inicio" class="hover:text-cyan-400 transition">Inicio</a>
+          <a href="#quienes" class="hover:text-cyan-400 transition">¿Quiénes somos?</a>
+          <a href="#productos" class="hover:text-cyan-400 transition">Productos</a>
+          <a href="https://wa.me/51944022505" target="_blank" class="hover:text-green-400 transition">Contacto</a>
+        </div>
+        <!-- Botón hamburguesa -->
+        <div class="md:hidden">
+          <button id="menu-btn" aria-label="Abrir menú" class="text-white text-2xl focus:outline-none">
+            ☰
+          </button>
+        </div>
       </div>
     </div>
+    <!-- Menú móvil -->
     <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 bg-gray-800">
-      <a href="#inicio" class="block hover:text-cyan-400">Inicio</a>
-      <a href="#quienes" class="block hover:text-cyan-400">¿Quiénes somos?</a>
-      <a href="#productos" class="block hover:text-cyan-400">Productos</a>
-      <a href="#personalizados" class="block hover:text-cyan-400">Personalizados</a>
-      <a href="#contacto" class="block hover:text-green-400">Contacto</a>
+      <a href="#inicio" class="block hover:text-cyan-400 transition">Inicio</a>
+      <a href="#quienes" class="block hover:text-cyan-400 transition">¿Quiénes somos?</a>
+      <a href="#productos" class="block hover:text-cyan-400 transition">Productos</a>
+      <a href="https://wa.me/51944022505" target="_blank" class="block hover:text-green-400 transition">Contacto</a>
     </div>
   </nav>
 
+  <!-- Separador para evitar que el menú tape contenido -->
   <div id="inicio" class="pt-16"></div>
 
-  <!-- HERO -->
+
+  <!-- Header -->
   <header class="bg-gray-900 text-center py-16 px-6">
-    <h1 class="text-5xl font-bold mb-4 text-cyan-400">M.I 3D LAB</h1>
-    <p class="text-2xl mb-6">Transformamos tus ideas en realidad con impresión 3D</p>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 text-cyan-400">M.I 3D LAB</h1>
+    <p class="text-xl md:text-2xl mb-6">Transformamos tus ideas en realidad con impresión 3D</p>
     <a href="#productos" class="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-full font-semibold transition">Ver Productos</a>
   </header>
 
-  <!-- QUIÉNES SOMOS -->
-  <section id="quienes" class="py-16 px-6 max-w-4xl mx-auto text-center">
+  <!-- Quiénes somos -->
+  <section class="py-16 px-6 max-w-4xl mx-auto text-center">
     <h2 class="text-3xl font-bold mb-4">¿Quiénes somos?</h2>
-    <p class="text-lg text-gray-300 mb-6">Soy un emprendedor de Yauri, Espinar. Decidí traer impresión 3D a nuestra comunidad para ayudarte a convertir tus ideas en objetos reales. En M.I 3D LAB, damos vida a tus ideas con tecnología y pasión local.</p>
-    <p class="text-cyan-400 font-semibold">Más de 50 clientes satisfechos ya confiaron en nosotros. ¿Y tú?</p>
+    <p class="text-lg text-gray-300">
+      Somos un laboratorio creativo especializado en impresión 3D personalizada. Desde llaveros hasta piezas funcionales, hacemos realidad tus ideas con precisión y estilo.
+    </p>
   </section>
 
-  <!-- PRODUCTOS -->
-  <section id="productos" class="py-16 px-6 max-w-7xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-10">Nuestros Productos</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      <div class="text-center">
-        <img src="images/llaveros/llavero1.jpg" class="rounded shadow mx-auto h-[200px] w-full object-cover mb-2" alt="Llavero personalizado">
-        <p class="text-sm">Llavero con nombre</p>
-        <p class="text-xs text-gray-400">Desde S/5.00</p>
-        <a href="https://wa.me/51944022505?text=Hola,%20quiero%20el%20llavero%20personalizado" target="_blank" class="inline-block mt-1 px-3 py-1 bg-green-500 hover:bg-green-600 text-white rounded text-sm">Encargar</a>
-      </div>
+  <!-- Tu idea hecha realidad -->
+  <section class="bg-gray-800 py-12 px-6 text-center">
+    <h3 class="text-2xl font-bold mb-2">Tu idea hecha realidad</h3>
+    <p class="mb-4 text-gray-300">¿Tienes una idea única? Cuéntanosla y la imprimimos para ti.</p>
+    <a href="https://wa.me/51944022505" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition">Chatear con nosotros</a>
+  </section>
+
+  <!-- Video: Así imprimimos tus ideas -->
+  <section class="bg-gray-950 py-16 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6 text-cyan-400">Así imprimimos tus ideas</h2>
+    <div class="max-w-4xl mx-auto aspect-video">
+      <iframe class="w-full h-96 rounded shadow-xl"
+        src="https://www.youtube.com/embed/bO2wcA4WdSI"
+        title="Impresión 3D - FabriQ3D"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
   </section>
 
-  <!-- PERSONALIZADOS -->
-  <section id="personalizados" class="bg-gray-800 py-16 px-6 text-center">
-    <h2 class="text-3xl font-bold mb-4 text-white">¿Quieres algo único?</h2>
-    <p class="text-gray-300 mb-6 max-w-2xl mx-auto">Cuéntanos tu idea y la hacemos realidad con impresión 3D. Desde piezas útiles hasta regalos personalizados, lo creamos contigo.</p>
-    <a href="https://wa.me/51944022505?text=Hola,%20quiero%20crear%20un%20producto%20personalizado" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition">Encargar ahora</a>
+
+  <!-- Productos -->
+  <section id="productos" class="py-16 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-10">Nuestros Productos</h2>
+
+    <!-- Llaveros -->
+    <div>
+      <h3 class="text-2xl font-semibold mt-10 mb-4">Llaveros</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <img src="images/llaveros/llavero1.jpg" alt="Llavero 1" class="rounded shadow">
+<img src="images/llaveros/llavero2.jpg" alt="Llavero 2" class="rounded shadow">
+<img src="images/llaveros/llavero3.jpg" alt="Llavero 3" class="rounded shadow">
+<img src="images/llaveros/llavero4.jpg" alt="Llavero 4" class="rounded shadow">
+<img src="images/llaveros/llavero5.jpg" alt="Llavero 5" class="rounded shadow">
+<img src="images/llaveros/llavero6.jpg" alt="Llavero 6" class="rounded shadow">
+<img src="images/llaveros/llavero7.jpg" alt="Llavero 7" class="rounded shadow">
+<img src="images/llaveros/llavero8.jpg" alt="Llavero 8" class="rounded shadow">
+<img src="images/llaveros/llavero9.jpg" alt="Llavero 9" class="rounded shadow">
+<img src="images/llaveros/llavero10.jpg" alt="Llavero 10" class="rounded shadow">
+      </div>
+    </div>
+
+    <!-- Decoraciones -->
+    <div>
+      <h3 class="text-2xl font-semibold mt-10 mb-4">Decoraciones</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <img src="images/decoraciones/decoracion1.jpg" alt="Decoración 1" class="rounded shadow">
+<img src="images/decoraciones/decoracion2.jpg" alt="Decoración 2" class="rounded shadow">
+<img src="images/decoraciones/decoracion3.jpg" alt="Decoración 3" class="rounded shadow">
+<img src="images/decoraciones/decoracion4.jpg" alt="Decoración 4" class="rounded shadow">
+<img src="images/decoraciones/decoracion5.jpg" alt="Decoración 5" class="rounded shadow">
+<img src="images/decoraciones/decoracion6.jpg" alt="Decoración 6" class="rounded shadow">
+<img src="images/decoraciones/decoracion7.jpg" alt="Decoración 7" class="rounded shadow">
+      </div>
+    </div>
+
+    <!-- Flexibles -->
+    <div>
+      <h3 class="text-2xl font-semibold mt-10 mb-4">Flexibles</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <img src="images/flexibles/flexible1.jpg" alt="Flexible 1" class="rounded shadow">
+<img src="images/flexibles/flexible2.jpg" alt="Flexible 2" class="rounded shadow">
+<img src="images/flexibles/flexible3.jpg" alt="Flexible 3" class="rounded shadow">
+<img src="images/flexibles/flexible4.jpg" alt="Flexible 4" class="rounded shadow">
+<img src="images/flexibles/flexible5.jpg" alt="Flexible 5" class="rounded shadow">
+<img src="images/flexibles/flexible6.jpg" alt="Flexible 6" class="rounded shadow">
+<img src="images/flexibles/flexible7.jpg" alt="Flexible 7" class="rounded shadow">
+<img src="images/flexibles/flexible8.jpg" alt="Flexible 8" class="rounded shadow">
+<img src="images/flexibles/flexible9.jpg" alt="Flexible 9" class="rounded shadow">
+      </div>
+    </div>
+
+    <!-- Macetas -->
+    <div>
+      <h3 class="text-2xl font-semibold mt-10 mb-4">Macetas</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <img src="images/macetas/maceta1.jpg" alt="Maceta 1" class="rounded shadow">
+<img src="images/macetas/maceta2.jpg" alt="Maceta 2" class="rounded shadow">
+<img src="images/macetas/maceta3.jpg" alt="Maceta 3" class="rounded shadow">
+<img src="images/macetas/maceta4.jpg" alt="Maceta 4" class="rounded shadow">
+<img src="images/macetas/maceta5.jpg" alt="Maceta 5" class="rounded shadow">
+<img src="images/macetas/maceta6.jpg" alt="Maceta 6" class="rounded shadow">
+<img src="images/macetas/maceta7.jpg" alt="Maceta 7" class="rounded shadow">
+<img src="images/macetas/maceta8.jpg" alt="Maceta 8" class="rounded shadow">
+<img src="images/macetas/maceta9.jpg" alt="Maceta 9" class="rounded shadow">
+      </div>
+    </div>
+
+    <!-- Organizadores -->
+    <div>
+      <h3 class="text-2xl font-semibold mt-10 mb-4">Organizadores</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <img src="images/organizadores/organizador1.jpg" alt="Organizador 1" class="rounded shadow">
+<img src="images/organizadores/organizador2.jpg" alt="Organizador 2" class="rounded shadow">
+<img src="images/organizadores/organizador3.jpg" alt="Organizador 3" class="rounded shadow">
+<img src="images/organizadores/organizador4.jpg" alt="Organizador 4" class="rounded shadow">
+<img src="images/organizadores/organizador5.jpg" alt="Organizador 5" class="rounded shadow">
+<img src="images/organizadores/organizador6.jpg" alt="Organizador 6" class="rounded shadow">
+<img src="images/organizadores/organizador7.jpg" alt="Organizador 7" class="rounded shadow">
+<img src="images/organizadores/organizador8.jpg" alt="Organizador 8" class="rounded shadow">
+<img src="images/organizadores/organizador9.jpg" alt="Organizador 9" class="rounded shadow">
+      </div>
+    </div>
+
+    <!-- Soportes -->
+    <div>
+      <h3 class="text-2xl font-semibold mt-10 mb-4">Soportes</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <img src="images/soportes/soporte1.jpg" alt="Soporte 1" class="rounded shadow">
+<img src="images/soportes/soporte2.jpg" alt="Soporte 2" class="rounded shadow">
+<img src="images/soportes/soporte3.jpg" alt="Soporte 3" class="rounded shadow">
+<img src="images/soportes/soporte4.jpg" alt="Soporte 4" class="rounded shadow">
+<img src="images/soportes/soporte5.jpg" alt="Soporte 5" class="rounded shadow">
+<img src="images/soportes/soporte6.jpg" alt="Soporte 6" class="rounded shadow">
+<img src="images/soportes/soporte7.jpg" alt="Soporte 7" class="rounded shadow">
+<img src="images/soportes/soporte8.jpg" alt="Soporte 8" class="rounded shadow">
+<img src="images/soportes/soporte9.jpg" alt="Soporte 9" class="rounded shadow">
+<img src="images/soportes/soporte10.jpg" alt="Soporte 10" class="rounded shadow">
+      </div>
+    </div>
+
   </section>
 
-  <!-- CONTACTO -->
-  <footer id="contacto" class="bg-gray-900 text-center py-12 mt-20 px-6">
+  <!-- Botón WhatsApp flotante -->
+  <a href="https://wa.me/51944022505" target="_blank"
+     class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 text-2xl">
+    💬
+  </a>
+
+  
+  <!-- Testimonios -->
+  <section class="bg-gray-800 py-16 px-6 text-center text-gray-300">
+    <h2 class="text-3xl font-bold text-white mb-10">Lo que dicen nuestros clientes</h2>
+    <div class="max-w-4xl mx-auto space-y-8">
+
+      <blockquote class="italic border-l-4 border-cyan-400 pl-4">
+        “Encargué una figura para regalar y quedó increíble. Lo recogí al día siguiente sin problemas.”
+        <span class="block mt-2 font-semibold text-white">— Rosa, Yauri</span>
+      </blockquote>
+
+      <blockquote class="italic border-l-4 border-green-400 pl-4">
+        “Me imprimieron un soporte para celular justo como lo necesitaba. ¡Ahora trabajo más cómodo!”
+        <span class="block mt-2 font-semibold text-white">— Julio, Condoroma</span>
+      </blockquote>
+
+      <blockquote class="italic border-l-4 border-yellow-400 pl-4">
+        “Buena atención y trabajo preciso. Soy de Ocoruro y me trajeron el pedido hasta la plaza.”
+        <span class="block mt-2 font-semibold text-white">— Lucía, Ocoruro</span>
+      </blockquote>
+
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-center py-12 mt-20 px-6">
     <h2 class="text-2xl font-semibold mb-4">De la idea a la realidad</h2>
-    <img src="images/footer_showcase.jpg" alt="Inspiración 3D" class="mx-auto mb-6 rounded shadow max-w-md w-full" />
+    <img src="images/footer_showcase.jpg" alt="Inspiración 3D"
+         class="mx-auto mb-6 rounded shadow max-w-md w-full" />
     <div class="flex justify-center space-x-4 mb-6">
       <a href="https://www.instagram.com/m.i.3d.lab" target="_blank" class="text-cyan-400 hover:text-white transition">Instagram</a>
       <a href="https://www.facebook.com/share/14GSrcz6yJF/" target="_blank" class="text-cyan-400 hover:text-white transition">Facebook</a>
@@ -83,18 +222,50 @@
     <p class="text-sm text-gray-500">&copy; 2025 M.I 3D LAB | Todos los derechos reservados</p>
   </footer>
 
-  <!-- WhatsApp flotante -->
-  <a href="https://wa.me/51944022505" target="_blank"
-     class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 text-2xl">
-    💬
-  </a>
 
-  <!-- JS -->
+  <!-- Script para menú hamburguesa -->
   <script>
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
     menuBtn.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+
+
+  <!-- Carrusel de productos destacados -->
+  <section class="bg-gray-950 py-16 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-10 text-cyan-400">Destacados de M.I 3D LAB</h2>
+    <div class="swiper mySwiper max-w-5xl mx-auto">
+      <div class="swiper-wrapper">
+        <!-- Reemplazar rutas con imágenes reales existentes -->
+        <div class="swiper-slide"><img src="images/llaveros/llavero3.jpg" class="rounded shadow mx-auto w-full max-w-xs"></div>
+        <div class="swiper-slide"><img src="images/decoraciones/decoracion5.jpg" class="rounded shadow mx-auto w-full max-w-xs"></div>
+        <div class="swiper-slide"><img src="images/flexibles/flexible2.jpg" class="rounded shadow mx-auto w-full max-w-xs"></div>
+        <div class="swiper-slide"><img src="images/macetas/maceta4.jpg" class="rounded shadow mx-auto w-full max-w-xs"></div>
+        <div class="swiper-slide"><img src="images/soportes/soporte7.jpg" class="rounded shadow mx-auto w-full max-w-xs"></div>
+        <div class="swiper-slide"><img src="images/organizadores/organizador1.jpg" class="rounded shadow mx-auto w-full max-w-xs"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SwiperJS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 1,
+      spaceBetween: 30,
+      centeredSlides: true,
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
     });
   </script>
 
